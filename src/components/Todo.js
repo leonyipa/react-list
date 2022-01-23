@@ -10,7 +10,7 @@ function Todo({todo,toggleTodo,display,deleteTodo}) {
         deleteTodo(todo.id)
     }
 
-    if (display == 'all' || todo.complete && display == 'completed' || !todo.complete && display == 'active'){
+    if ((display === 'all') || (todo.complete && display === 'completed') || (!todo.complete && display === 'active')){
         return (
             <div class="list-items">
                 <label>

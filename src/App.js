@@ -19,27 +19,28 @@ function App() {
     if (storedTodos) setTodos(storedTodos)
   }, [])
 
+
   useEffect(() => { //Fetch Data from website if first-time visit
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if (storedTodos) return
 
+    function fetchData(number){
+      fetch('https://jsonplaceholder.typicode.com/todos/'+number)
+        .then(function(response){
+          return response.json()
+        })
+        .then((response) => {
+          setTodos(prevTodos => {
+            return [...prevTodos, { id: Math.random()*1000000, name: response.title, complete: response.completed}]
+          })
+  
+          if (number < 10)
+            fetchData(number+1);
+        })
+    }
+
     fetchData(1);
   }, [])
-
-  function fetchData(number){
-    fetch('https://jsonplaceholder.typicode.com/todos/'+number)
-			.then(function(response){
-				return response.json()
-			})
-			.then((response) => {
-        setTodos(prevTodos => {
-          return [...prevTodos, { id: Math.random()*1000000, name: response.title, complete: response.completed}]
-        })
-
-        if (number < 10)
-          fetchData(number+1);
-			})
-  }
 
   useEffect(() => { //Store data into LocalStorage
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
