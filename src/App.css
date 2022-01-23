@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.Underline{
+  text-decoration: underline;
+}
+
+body{
+	background-color:#EAC300;
+}
+.list-items{
+	width:700px;
+}
+.button-wrapper{
+	width:700px; margin-bottom:6px
+}
+.list{
+	border-style:solid;width:700px;text-align:left;
+}
+.closeTodo{
+  float:right;
+}
