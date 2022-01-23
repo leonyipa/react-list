@@ -94,10 +94,10 @@ function App() {
   return (
     <>
       <center>
-        To Do List
+      📚To Do List
         <div class="button-wrapper">
           <input type="text" ref={todoNameRef} />
-          <button onClick={handleAddTodo}>Add</button>
+          <button onClick={handleAddTodo} className="button1">Add</button>
 
           
         </div>
@@ -106,9 +106,9 @@ function App() {
           <TodoList todos={todos} toggleTodo={toggleTodo} display={display} deleteTodo={deleteTodo} />
         </div>
 
-        🌎<span onClick={handleAllButton} className={classAll}>All</span> 
-        ✔️<span onClick={handleCompletedButton} className={classCompleted}>Completed</span> 
-        ⏱️<span onClick={handleActiveButton} className={classActive}>Active</span>
+        <span>🌎</span><span onClick={handleAllButton} className={classAll}>All</span> 
+        <span> ✔️</span><span onClick={handleCompletedButton} className={classCompleted}>Completed</span> 
+        <span> ⏱️</span><span onClick={handleActiveButton} className={classActive}>Active</span>
       </center>
     </>
   );
