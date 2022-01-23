@@ -106,9 +106,9 @@ function App() {
           <TodoList todos={todos} toggleTodo={toggleTodo} display={display} deleteTodo={deleteTodo} />
         </div>
 
-        <span onClick={handleAllButton} className={classAll}>All</span> 
-        <span onClick={handleCompletedButton} className={classCompleted}>Completed</span> 
-        <span onClick={handleActiveButton} className={classActive}>Active</span>
+        🌎<span onClick={handleAllButton} className={classAll}>All</span> 
+        ✔️<span onClick={handleCompletedButton} className={classCompleted}>Completed</span> 
+        ⏱️<span onClick={handleActiveButton} className={classActive}>Active</span>
       </center>
     </>
   );
