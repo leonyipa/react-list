@@ -1,3 +1,24 @@
+# Details
+
+App -> TodoList -> Todo
+
+App.js:
+  Most of the important functions are implemented here, including deleteTodo(), toggleTodo(), fetchData(), localStorage.
+  Handlers for buttons (i.e. Add, All/Completed/Active) are implemented here.
+  React hooks (i.e. useState, useRef, useEffect) are used.
+
+  todos is object that contains all the items and their information (i.e. name, completed state) of the todo-list.
+  display is a state that is either All/Completed/Active.
+
+TodoList:
+  Display certain "Todo.js" according to the display state of All/Completed/Active.
+  
+Todo:
+  With each Todo's name and completed state, and their event handlers.
+  
+Time of Completion: 5 hours.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
