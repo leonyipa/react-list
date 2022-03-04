@@ -15,8 +15,6 @@ TodoList:
   
 Todo:
   With each Todo's name and completed state, and their event handlers.
-  
-Time of Completion: 5 hours.
 
 
 # Getting Started with Create React App
